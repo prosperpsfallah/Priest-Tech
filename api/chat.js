@@ -4,7 +4,7 @@ module.exports = async (req, res) => {
     if (req.method !== "POST") {
         return res.status(405).json({
             success: false,
-            error: "Method not allowed. Use POST."
+            error: "Method not allowed"
         });
     }
 
@@ -14,30 +14,30 @@ module.exports = async (req, res) => {
         if (!apiKey) {
             return res.status(500).json({
                 success: false,
-                error: "GROQ_API_KEY is not configured in Vercel."
+                error: "GROQ_API_KEY is missing"
             });
         }
 
-        const message = req.body?.message;
+        const { message } = req.body || {};
 
         if (!message || typeof message !== "string") {
             return res.status(400).json({
                 success: false,
-                error: "Message is required."
+                error: "Please enter a message"
             });
         }
 
         const groq = new Groq({
-            apiKey: apiKey
+            apiKey
         });
 
-        const completion = await groq.chat.completions.create({
-            model: process.env.GROQ_MODEL || "llama-3.3-70b-versatile",
+        const response = await groq.chat.completions.create({
+            model: "llama-3.3-70b-versatile",
             messages: [
                 {
                     role: "system",
                     content:
-                        "You are PRIEST AI, a helpful, intelligent and friendly AI assistant created for PRIEST TECH."
+                        "You are PRIEST AI, the intelligent AI assistant for PRIEST TECH. Be helpful, friendly, clear and professional."
                 },
                 {
                     role: "user",
@@ -49,16 +49,16 @@ module.exports = async (req, res) => {
         });
 
         const reply =
-            completion.choices?.[0]?.message?.content ||
-            "I couldn't generate a response.";
+            response.choices?.[0]?.message?.content ||
+            "Sorry, I couldn't generate a response.";
 
         return res.status(200).json({
             success: true,
-            reply: reply
+            reply
         });
 
     } catch (error) {
-        console.error("PRIEST AI backend error:", error);
+        console.error("PRIEST AI ERROR:", error);
 
         return res.status(500).json({
             success: false,
