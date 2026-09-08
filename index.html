@@ -3,2424 +3,1781 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-          content="Priest Tech — Your Vision. Our Code. Professional websites, system administration, IT support, digital systems and technology solutions.">
+    <meta
+        name="description"
+        content="PRIEST TECH — Technology, system administration, web development, IT support and digital solutions."
+    >
 
-    <meta name="keywords"
-          content="Priest Tech, Liberia technology, website development, web design, system administration, IT support, software development, network security">
+    <meta
+        name="theme-color"
+        content="#050816"
+    >
 
-    <meta name="author" content="Priest Tech">
-
-    <meta name="theme-color" content="#05070d">
-
-    <meta property="og:title" content="Priest Tech — Your Vision. Our Code.">
-    <meta property="og:description"
-          content="We build websites and digital solutions for businesses, organizations and individuals.">
-    <meta property="og:type" content="website">
-
-    <title>PRIEST TECH | Your Vision. Our Code.</title>
+    <title>PRIEST TECH | Technology & Digital Solutions</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/priest-tech-logo.png">
+    <link
+        rel="icon"
+        type="image/png"
+        href="01A8656D-4E6D-4437-B00A-8ED81365A6DE.png"
+    >
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap"
-          rel="stylesheet">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Main stylesheet -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <!-- AI styles -->
+    <style>
+
+        /* =====================================================
+           PRIEST TECH — AI SECTION
+        ===================================================== */
+
+        .ai-section {
+            padding: 100px 20px;
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(0, 110, 255, 0.12),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 80% 80%,
+                    rgba(255, 200, 0, 0.08),
+                    transparent 35%
+                ),
+                #050816;
+        }
+
+        .ai-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .ai-box {
+            background: rgba(10, 18, 38, 0.9);
+            border: 1px solid rgba(0, 140, 255, 0.3);
+            border-radius: 24px;
+            padding: 25px;
+            box-shadow:
+                0 20px 70px rgba(0, 0, 0, 0.35),
+                0 0 40px rgba(0, 110, 255, 0.08);
+            overflow: hidden;
+        }
+
+        .ai-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .ai-logo {
+            width: 55px;
+            height: 55px;
+            border-radius: 15px;
+            object-fit: cover;
+            border: 1px solid rgba(255, 210, 0, 0.5);
+        }
+
+        .ai-header h3 {
+            margin: 0;
+            color: #ffffff;
+            font-family: "Orbitron", sans-serif;
+        }
+
+        .ai-header p {
+            margin: 5px 0 0;
+            color: #8f9bb3;
+            font-size: 14px;
+        }
+
+        .ai-chat {
+            height: 380px;
+            overflow-y: auto;
+            padding: 20px;
+            background: #030611;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.06);
+            margin-bottom: 15px;
+        }
+
+        .ai-message {
+            max-width: 85%;
+            width: fit-content;
+            padding: 13px 16px;
+            margin-bottom: 12px;
+            border-radius: 15px;
+            background: #101a31;
+            color: #e9efff;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .ai-message.user-message {
+            margin-left: auto;
+            background: #075ee8;
+            color: #ffffff;
+        }
+
+        .ai-input-area {
+            display: flex;
+            gap: 10px;
+            align-items: stretch;
+        }
+
+        #aiInput {
+            flex: 1;
+            min-height: 55px;
+            max-height: 150px;
+            resize: vertical;
+            padding: 15px;
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.1);
+            outline: none;
+            background: #080e1d;
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 15px;
+        }
+
+        #aiInput:focus {
+            border-color: #1683ff;
+            box-shadow: 0 0 0 3px rgba(22,131,255,0.1);
+        }
+
+        #sendAI {
+            min-width: 180px;
+            border: none;
+            border-radius: 14px;
+            padding: 0 20px;
+            background: linear-gradient(
+                135deg,
+                #087cff,
+                #0052c9
+            );
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        #sendAI:hover {
+            transform: translateY(-2px);
+        }
+
+        #sendAI:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .api-warning {
+            color: #7e8ba6;
+            font-size: 12px;
+            line-height: 1.5;
+            margin: 15px 0 0;
+        }
+
+        .ai-status {
+            display: none;
+            margin-top: 10px;
+            font-size: 13px;
+            color: #ffd000;
+        }
+
+        @media (max-width: 700px) {
+
+            .ai-section {
+                padding: 70px 15px;
+            }
+
+            .ai-box {
+                padding: 15px;
+                border-radius: 18px;
+            }
+
+            .ai-chat {
+                height: 320px;
+            }
+
+            .ai-input-area {
+                flex-direction: column;
+            }
+
+            #sendAI {
+                min-height: 52px;
+            }
+
+        }
+
+        /* =====================================================
+           PAGE LOADER SAFETY
+        ===================================================== */
+
+        #pageLoader {
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        #pageLoader.loader-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+    </style>
 </head>
 
 <body>
 
-<!-- =========================================================
-     PAGE LOADER
-========================================================= -->
+    <!-- =====================================================
+         PAGE LOADER
+    ===================================================== -->
 
-<div id="page-loader" class="page-loader">
-
-    <div class="loader-content">
-
-        <img
-            src="assets/priest-tech-logo.png"
-            alt="Priest Tech Logo"
-            class="loader-logo">
-
-        <div class="loader-spinner"></div>
-
-        <p>INITIALIZING PRIEST TECH...</p>
-
-    </div>
-
-</div>
-
-
-<!-- =========================================================
-     BACKGROUND EFFECTS
-========================================================= -->
-
-<div class="background-effects" aria-hidden="true">
-
-    <div class="grid-background"></div>
-
-    <div class="glow glow-gold"></div>
-
-    <div class="glow glow-blue"></div>
-
-    <div class="floating-orb orb-one"></div>
-
-    <div class="floating-orb orb-two"></div>
-
-</div>
-
-
-<!-- =========================================================
-     HEADER / NAVIGATION
-========================================================= -->
-
-<header class="site-header" id="site-header">
-
-    <nav class="navbar">
-
-        <a href="#home"
-           class="brand"
-           aria-label="Priest Tech Home">
+    <div
+        id="pageLoader"
+        class="page-loader"
+    >
+        <div class="loader-content">
 
             <img
-                src="assets/priest-tech-logo.png"
-                alt="Priest Tech Logo"
-                class="brand-logo">
+                src="01A8656D-4E6D-4437-B00A-8ED81365A6DE.png"
+                alt="PRIEST TECH"
+                class="loader-logo"
+            >
 
-            <div class="brand-text">
+            <div class="loader-spinner"></div>
 
-                <span class="brand-name">
-                    PRIEST TECH
-                </span>
+            <p>
+                PRIEST TECH
+            </p>
 
-                <span class="brand-tagline">
-                    YOUR VISION. OUR CODE.
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <!-- Desktop Navigation -->
-
-        <div class="nav-links" id="nav-links">
-
-            <a href="#home" class="nav-link active">
-                Home
-            </a>
-
-            <a href="#about" class="nav-link">
-                About
-            </a>
-
-            <a href="#services" class="nav-link">
-                Services
-            </a>
-
-            <a href="#projects" class="nav-link">
-                Projects
-            </a>
-
-            <a href="#team" class="nav-link">
-                Our Team
-            </a>
-
-            <a href="#join" class="nav-link">
-                Join Us
-            </a>
-
-            <a href="#contact" class="nav-link nav-contact">
-                Contact
-            </a>
+            <span>
+                Technology. Innovation. Solutions.
+            </span>
 
         </div>
-
-
-        <!-- Mobile Menu Button -->
-
-        <button
-            class="menu-toggle"
-            id="menu-toggle"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            type="button">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-    </nav>
-
-</header>
-
-
-<!-- =========================================================
-     MAIN CONTENT
-========================================================= -->
-
-<main>
-
-
-<!-- =========================================================
-     HERO SECTION
-========================================================= -->
-
-<section
-    id="home"
-    class="hero-section">
-
-    <div class="hero-tech-background" aria-hidden="true">
-
-        <div class="tech-line line-one"></div>
-        <div class="tech-line line-two"></div>
-        <div class="tech-line line-three"></div>
-
-        <div class="network-node node-one"></div>
-        <div class="network-node node-two"></div>
-        <div class="network-node node-three"></div>
-        <div class="network-node node-four"></div>
-
     </div>
 
 
-    <div class="container hero-container">
+    <!-- =====================================================
+         BACKGROUND EFFECTS
+    ===================================================== -->
 
-        <div class="hero-content">
-
-            <div class="hero-badge">
-
-                <span class="status-dot"></span>
-
-                <span>
-                    TECHNOLOGY • DESIGN • INNOVATION
-                </span>
-
-            </div>
+    <div class="background-effects">
+        <div class="grid-overlay"></div>
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+    </div>
 
 
-            <p class="hero-small-title">
-                WELCOME TO
-            </p>
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
 
+    <header
+        class="site-header"
+        id="header"
+    >
 
-            <h1 class="hero-title">
+        <div class="container nav-container">
 
-                PRIEST
-                <span>TECH</span>
-
-            </h1>
-
-
-            <h2 class="hero-headline">
-                WE BUILD DIGITAL
-                <span>SOLUTIONS FOR THE FUTURE.</span>
-            </h2>
-
-
-            <p class="hero-description">
-
-                From professional websites to system administration
-                and technical support, Priest Tech helps businesses,
-                organizations and individuals turn their ideas into
-                reliable digital solutions.
-
-            </p>
-
-
-            <div class="hero-actions">
-
-                <a
-                    href="#contact"
-                    class="btn btn-primary">
-
-                    <i class="fa-solid fa-rocket"></i>
-
-                    START A PROJECT
-
-                </a>
-
-
-                <a
-                    href="#contact"
-                    class="btn btn-secondary">
-
-                    <i class="fa-solid fa-comments"></i>
-
-                    CONTACT PRIEST TECH
-
-                </a>
-
-            </div>
-
-
-            <div class="hero-stats">
-
-                <div class="hero-stat">
-
-                    <strong
-                        class="counter"
-                        data-target="7">
-                        0
-                    </strong>
-
-                    <span>
-                        SERVICES
-                    </span>
-
-                </div>
-
-
-                <div class="hero-stat">
-
-                    <strong
-                        class="counter"
-                        data-target="10">
-                        0
-                    </strong>
-
-                    <span>
-                        SOLUTIONS
-                    </span>
-
-                </div>
-
-
-                <div class="hero-stat">
-
-                    <strong
-                        class="counter"
-                        data-target="100">
-                        0
-                    </strong>
-
-                    <span>
-                        COMMITMENT %
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- Hero Logo -->
-
-        <div class="hero-visual">
-
-            <div class="hero-logo-container">
-
-                <div class="logo-ring ring-one"></div>
-
-                <div class="logo-ring ring-two"></div>
-
-                <div class="logo-ring ring-three"></div>
-
-
-                <div class="hero-logo-glow"></div>
-
+            <a
+                href="#home"
+                class="brand"
+            >
 
                 <img
-                    src="assets/priest-tech-logo.png"
-                    alt="Priest Tech Official Logo"
-                    class="hero-logo">
+                    src="01A8656D-4E6D-4437-B00A-8ED81365A6DE.png"
+                    alt="PRIEST TECH Logo"
+                >
 
-            </div>
-
-
-            <div class="floating-tech-card card-server">
-
-                <i class="fa-solid fa-server"></i>
-
-                <div>
-                    <strong>
-                        SYSTEMS
-                    </strong>
-
-                    <small>
-                        RELIABLE INFRASTRUCTURE
-                    </small>
+                <div class="brand-text">
+                    <strong>PRIEST TECH</strong>
+                    <span>Technology & Digital Solutions</span>
                 </div>
-
-            </div>
-
-
-            <div class="floating-tech-card card-code">
-
-                <i class="fa-solid fa-code"></i>
-
-                <div>
-                    <strong>
-                        DEVELOPMENT
-                    </strong>
-
-                    <small>
-                        DIGITAL SOLUTIONS
-                    </small>
-                </div>
-
-            </div>
-
-
-            <div class="floating-tech-card card-network">
-
-                <i class="fa-solid fa-network-wired"></i>
-
-                <div>
-                    <strong>
-                        NETWORK
-                    </strong>
-
-                    <small>
-                        CONNECTED FUTURE
-                    </small>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <a
-        href="#services"
-        class="scroll-indicator"
-        aria-label="Scroll to services">
-
-        <span>
-            EXPLORE
-        </span>
-
-        <i class="fa-solid fa-chevron-down"></i>
-
-    </a>
-
-</section>
-
-
-<!-- =========================================================
-     ABOUT SECTION
-========================================================= -->
-
-<section
-    id="about"
-    class="section about-section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span class="section-label">
-                WHO WE ARE
-            </span>
-
-            <h2>
-                ABOUT <span>PRIEST TECH</span>
-            </h2>
-
-            <p>
-                Technology built around your vision.
-            </p>
-
-        </div>
-
-
-        <div class="about-grid">
-
-            <div class="about-content">
-
-                <div class="about-intro">
-
-                    <span class="about-number">
-                        01
-                    </span>
-
-                    <h3>
-                        Technology that solves real problems.
-                    </h3>
-
-                </div>
-
-
-                <p>
-
-                    Priest Tech is a growing technology team focused
-                    on building modern digital solutions for businesses,
-                    organizations, schools and individuals.
-
-                </p>
-
-
-                <p>
-
-                    We combine creativity, technology and problem-solving
-                    to develop websites, systems and technical solutions
-                    that help our clients operate more efficiently in a
-                    digital world.
-
-                </p>
-
-
-                <p>
-
-                    Our goal is simple: understand your vision, build
-                    the right solution and provide dependable technical
-                    support.
-
-                </p>
-
-
-                <div class="about-highlight">
-
-                    <i class="fa-solid fa-bolt"></i>
-
-                    <span>
-                        CODE • DESIGN • BUILD
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="mission-vision">
-
-                <article class="info-card">
-
-                    <div class="info-icon">
-
-                        <i class="fa-solid fa-bullseye"></i>
-
-                    </div>
-
-                    <div>
-
-                        <span class="info-label">
-                            OUR MISSION
-                        </span>
-
-                        <h3>
-                            Building Opportunities Through Technology
-                        </h3>
-
-                        <p>
-
-                            To provide accessible, reliable and innovative
-                            technology solutions that help individuals and
-                            organizations grow.
-
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="info-card">
-
-                    <div class="info-icon">
-
-                        <i class="fa-solid fa-eye"></i>
-
-                    </div>
-
-                    <div>
-
-                        <span class="info-label">
-                            OUR VISION
-                        </span>
-
-                        <h3>
-                            A Trusted Technology Partner
-                        </h3>
-
-                        <p>
-
-                            To become a trusted technology solutions
-                            provider in Liberia and beyond.
-
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     SERVICES SECTION
-========================================================= -->
-
-<section
-    id="services"
-    class="section services-section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span class="section-label">
-                WHAT WE DO
-            </span>
-
-            <h2>
-                OUR TECHNOLOGY <span>SERVICES</span>
-            </h2>
-
-            <p>
-                Professional digital services designed around your needs.
-            </p>
-
-        </div>
-
-
-        <div class="services-grid">
-
-
-            <!-- Service 01 -->
-
-            <article class="service-card">
-
-                <div class="service-number">
-                    01
-                </div>
-
-                <div class="service-icon">
-
-                    <i class="fa-solid fa-globe"></i>
-
-                </div>
-
-                <h3>
-                    Website Development
-                </h3>
-
-                <p>
-
-                    Professional websites for businesses, schools,
-                    organizations, entrepreneurs and personal brands.
-
-                </p>
-
-                <a href="#contact" class="service-link">
-
-                    Learn More
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
-
-            </article>
-
-
-            <!-- Service 02 -->
-
-            <article class="service-card">
-
-                <div class="service-number">
-                    02
-                </div>
-
-                <div class="service-icon">
-
-                    <i class="fa-solid fa-pen-ruler"></i>
-
-                </div>
-
-                <h3>
-                    Web Design
-                </h3>
-
-                <p>
-
-                    Modern, responsive and user-friendly website
-                    interfaces designed to represent your brand
-                    professionally.
-
-                </p>
-
-                <a href="#contact" class="service-link">
-
-                    Learn More
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
-
-            </article>
-
-
-            <!-- Service 03 -->
-
-            <article class="service-card">
-
-                <div class="service-number">
-                    03
-                </div>
-
-                <div class="service-icon">
-
-                    <i class="fa-solid fa-server"></i>
-
-                </div>
-
-                <h3>
-                    System Administration
-                </h3>
-
-                <p>
-
-                    System setup, management, maintenance,
-                    troubleshooting and administration.
-
-                </p>
-
-                <a href="#contact" class="service-link">
-
-                    Learn More
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
-
-            </article>
-
-
-            <!-- Service 04 -->
-
-            <article class="service-card">
-
-                <div class="service-number">
-                    04
-                </div>
-
-                <div class="service-icon">
-
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-
-                </div>
-
-                <h3>
-                    IT & Technical Support
-                </h3>
-
-                <p>
-
-                    Reliable technical assistance for computer systems,
-                    software, networks and digital infrastructure.
-
-                </p>
-
-                <a href="#contact" class="service-link">
-
-                    Learn More
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
-
-            </article>
-
-
-            <!-- Service 05 -->
-
-            <article class="service-card">
-
-                <div class="service-number">
-                    05
-                </div>
-
-                <div class="service-icon">
-
-                    <i class="fa-solid fa-gears"></i>
-
-                </div>
-
-                <h3>
-                    System Development
-                </h3>
-
-                <p>
-
-                    Development of customized digital systems and
-                    management platforms for organizations.
-
-                </p>
-
-                <a href="#contact" class="service-link">
-
-                    Learn More
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
-
-            </article>
-
-
-            <!-- Service 06 -->
-
-            <article class="service-card">
-
-                <div class="service-number">
-                    06
-                </div>
-
-                <div class="service-icon">
-
-                    <i class="fa-solid fa-shield-halved"></i>
-
-                </div>
-
-                <h3>
-                    Network & Security
-                </h3>
-
-                <p>
-
-                    Basic network configuration, system security
-                    practices, maintenance and technical troubleshooting.
-
-                </p>
-
-                <a href="#contact" class="service-link">
-
-                    Learn More
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     HOW WE WORK
-========================================================= -->
-
-<section
-    id="process"
-    class="section process-section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span class="section-label">
-                OUR PROCESS
-            </span>
-
-            <h2>
-                HOW WE <span>WORK</span>
-            </h2>
-
-            <p>
-                From your first idea to the finished solution.
-            </p>
-
-        </div>
-
-
-        <div class="process-timeline">
-
-
-            <article class="process-step">
-
-                <div class="process-line"></div>
-
-                <div class="process-number">
-                    01
-                </div>
-
-                <div class="process-icon">
-
-                    <i class="fa-solid fa-comments"></i>
-
-                </div>
-
-                <span>
-                    DISCOVER
-                </span>
-
-                <p>
-                    We listen to your idea, business needs and goals.
-                </p>
-
-            </article>
-
-
-            <article class="process-step">
-
-                <div class="process-line"></div>
-
-                <div class="process-number">
-                    02
-                </div>
-
-                <div class="process-icon">
-
-                    <i class="fa-solid fa-map"></i>
-
-                </div>
-
-                <span>
-                    PLAN
-                </span>
-
-                <p>
-                    We develop a clear technical plan for the project.
-                </p>
-
-            </article>
-
-
-            <article class="process-step">
-
-                <div class="process-line"></div>
-
-                <div class="process-number">
-                    03
-                </div>
-
-                <div class="process-icon">
-
-                    <i class="fa-solid fa-code"></i>
-
-                </div>
-
-                <span>
-                    BUILD
-                </span>
-
-                <p>
-                    Our team designs, develops and tests your solution.
-                </p>
-
-            </article>
-
-
-            <article class="process-step">
-
-                <div class="process-line"></div>
-
-                <div class="process-number">
-                    04
-                </div>
-
-                <div class="process-icon">
-
-                    <i class="fa-solid fa-rocket"></i>
-
-                </div>
-
-                <span>
-                    DELIVER
-                </span>
-
-                <p>
-                    We launch your project and provide support when needed.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     PROJECTS / PORTFOLIO
-========================================================= -->
-
-<section
-    id="projects"
-    class="section projects-section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span class="section-label">
-                OUR WORK
-            </span>
-
-            <h2>
-                PROJECTS WE <span>BUILD</span>
-            </h2>
-
-            <p>
-                Digital solutions designed to make an impact.
-            </p>
-
-        </div>
-
-
-        <!-- Project Filter -->
-
-        <div class="project-filters">
-
-            <button
-                type="button"
-                class="filter-btn active"
-                data-filter="all">
-
-                All
-
-            </button>
-
-            <button
-                type="button"
-                class="filter-btn"
-                data-filter="business">
-
-                Business
-
-            </button>
-
-            <button
-                type="button"
-                class="filter-btn"
-                data-filter="school">
-
-                School Systems
-
-            </button>
-
-            <button
-                type="button"
-                class="filter-btn"
-                data-filter="ecommerce">
-
-                E-Commerce
-
-            </button>
-
-            <button
-                type="button"
-                class="filter-btn"
-                data-filter="management">
-
-                Management
-
-            </button>
-
-        </div>
-
-
-        <div class="projects-grid" id="projects-grid">
-
-
-            <!-- Project 01 -->
-
-            <article
-                class="project-card"
-                data-category="business">
-
-                <div class="project-image">
-
-                    <div class="project-placeholder">
-
-                        <i class="fa-solid fa-building"></i>
-
-                    </div>
-
-                    <span class="project-category">
-                        BUSINESS WEBSITE
-                    </span>
-
-                </div>
-
-                <div class="project-content">
-
-                    <h3>
-                        Business Website
-                    </h3>
-
-                    <p>
-                        Professional digital presence for a modern business.
-                    </p>
-
-                    <div class="project-tech">
-
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-
-                    </div>
-
-                    <a href="#contact" class="project-link">
-
-                        View Project
-
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- Project 02 -->
-
-            <article
-                class="project-card"
-                data-category="school">
-
-                <div class="project-image">
-
-                    <div class="project-placeholder">
-
-                        <i class="fa-solid fa-school"></i>
-
-                    </div>
-
-                    <span class="project-category">
-                        SCHOOL SYSTEM
-                    </span>
-
-                </div>
-
-                <div class="project-content">
-
-                    <h3>
-                        School Management System
-                    </h3>
-
-                    <p>
-                        A digital platform designed to manage school operations.
-                    </p>
-
-                    <div class="project-tech">
-
-                        <span>Web App</span>
-                        <span>Database</span>
-                        <span>Cloud</span>
-
-                    </div>
-
-                    <a href="#contact" class="project-link">
-
-                        View Project
-
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- Project 03 -->
-
-            <article
-                class="project-card"
-                data-category="ecommerce">
-
-                <div class="project-image">
-
-                    <div class="project-placeholder">
-
-                        <i class="fa-solid fa-cart-shopping"></i>
-
-                    </div>
-
-                    <span class="project-category">
-                        E-COMMERCE
-                    </span>
-
-                </div>
-
-                <div class="project-content">
-
-                    <h3>
-                        Online Store
-                    </h3>
-
-                    <p>
-                        Responsive e-commerce experience for digital businesses.
-                    </p>
-
-                    <div class="project-tech">
-
-                        <span>Frontend</span>
-                        <span>Payments</span>
-                        <span>Database</span>
-
-                    </div>
-
-                    <a href="#contact" class="project-link">
-
-                        View Project
-
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- Project 04 -->
-
-            <article
-                class="project-card"
-                data-category="management">
-
-                <div class="project-image">
-
-                    <div class="project-placeholder">
-
-                        <i class="fa-solid fa-chart-line"></i>
-
-                    </div>
-
-                    <span class="project-category">
-                        MANAGEMENT SYSTEM
-                    </span>
-
-                </div>
-
-                <div class="project-content">
-
-                    <h3>
-                        Custom Management Platform
-                    </h3>
-
-                    <p>
-                        Customized digital tools for organization management.
-                    </p>
-
-                    <div class="project-tech">
-
-                        <span>Dashboard</span>
-                        <span>API</span>
-                        <span>Database</span>
-
-                    </div>
-
-                    <a href="#contact" class="project-link">
-
-                        View Project
-
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- Project 05 -->
-
-            <article
-                class="project-card"
-                data-category="business">
-
-                <div class="project-image">
-
-                    <div class="project-placeholder">
-
-                        <i class="fa-solid fa-laptop-code"></i>
-
-                    </div>
-
-                    <span class="project-category">
-                        PERSONAL WEBSITE
-                    </span>
-
-                </div>
-
-                <div class="project-content">
-
-                    <h3>
-                        Personal Brand Website
-                    </h3>
-
-                    <p>
-                        A modern online identity for professionals and creators.
-                    </p>
-
-                    <div class="project-tech">
-
-                        <span>UI/UX</span>
-                        <span>Responsive</span>
-                        <span>SEO</span>
-
-                    </div>
-
-                    <a href="#contact" class="project-link">
-
-                        View Project
-
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- Project 06 -->
-
-            <article
-                class="project-card"
-                data-category="management">
-
-                <div class="project-image">
-
-                    <div class="project-placeholder">
-
-                        <i class="fa-solid fa-layer-group"></i>
-
-                    </div>
-
-                    <span class="project-category">
-                        CUSTOM PLATFORM
-                    </span>
-
-                </div>
-
-                <div class="project-content">
-
-                    <h3>
-                        Custom Digital Platform
-                    </h3>
-
-                    <p>
-                        Scalable technology designed around organizational needs.
-                    </p>
-
-                    <div class="project-tech">
-
-                        <span>Web App</span>
-                        <span>API</span>
-                        <span>Cloud</span>
-
-                    </div>
-
-                    <a href="#contact" class="project-link">
-
-                        View Project
-
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                    </a>
-
-                </div>
-
-            </article>
-
-        </div>
-
-
-        <div class="projects-more">
-
-            <a href="#contact" class="btn btn-secondary">
-
-                <i class="fa-solid fa-folder-open"></i>
-
-                DISCUSS YOUR PROJECT
 
             </a>
 
-        </div>
 
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     TEAM SECTION
-========================================================= -->
-
-<section
-    id="team"
-    class="section team-section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span class="section-label">
-                OUR PEOPLE
-            </span>
-
-            <h2>
-                THE PRIEST TECH <span>TEAM</span>
-            </h2>
-
-            <p>
-                A growing team focused on technology and problem-solving.
-            </p>
-
-        </div>
+            <button
+                type="button"
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation"
+            >
+                <i class="fas fa-bars"></i>
+            </button>
 
 
-        <div class="team-intro">
+            <nav
+                class="main-nav"
+                id="mainNav"
+            >
 
-            <div class="team-visual">
-
-                <div class="team-icon-large">
-
-                    <i class="fa-solid fa-users"></i>
-
-                </div>
-
-                <div class="team-orbit orbit-a"></div>
-                <div class="team-orbit orbit-b"></div>
-
-            </div>
-
-
-            <div class="team-content">
-
-                <span class="section-label">
-                    BUILDING TOGETHER
-                </span>
-
-                <h3>
-                    Great technology starts with great people.
-                </h3>
-
-                <p>
-
-                    Priest Tech is growing a community of talented people
-                    who are passionate about technology, creativity and
-                    solving real-world problems.
-
-                </p>
-
-                <p>
-
-                    As our projects grow, we welcome professionals,
-                    developers, designers, system administrators and
-                    technology enthusiasts who want to contribute.
-
-                </p>
-
-
-                <a href="#join" class="btn btn-primary">
-
-                    MEET THE OPPORTUNITIES
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
+                <a
+                    href="#home"
+                    class="nav-link active"
+                >
+                    Home
                 </a>
 
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     JOIN THE TEAM
-========================================================= -->
-
-<section
-    id="join"
-    class="section join-section">
-
-    <div class="container">
-
-        <div class="join-wrapper">
-
-            <div class="join-content">
-
-                <span class="section-label">
-                    CAREERS & COLLABORATION
-                </span>
-
-                <h2>
-                    JOIN THE PRIEST TECH <span>TEAM</span>
-                </h2>
-
-                <p>
-
-                    We are building a team of talented people who are
-                    passionate about technology.
-
-                </p>
-
-                <p>
-
-                    If you have skills in technology, development,
-                    design or digital services and you're interested
-                    in working with Priest Tech on future projects,
-                    we'd love to hear from you.
-
-                </p>
-
-                <a href="#team-application"
-                   class="btn btn-primary">
-
-                    JOIN OUR TEAM
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
+                <a
+                    href="#about"
+                    class="nav-link"
+                >
+                    About
                 </a>
 
-            </div>
+                <a
+                    href="#services"
+                    class="nav-link"
+                >
+                    Services
+                </a>
 
+                <a
+                    href="#process"
+                    class="nav-link"
+                >
+                    Process
+                </a>
 
-            <div class="opportunities">
+                <a
+                    href="#projects"
+                    class="nav-link"
+                >
+                    Projects
+                </a>
 
-                <h3>
-                    OPPORTUNITIES
-                </h3>
+                <a
+                    href="#team"
+                    class="nav-link"
+                >
+                    Team
+                </a>
 
+                <a
+                    href="#ai"
+                    class="nav-link"
+                >
+                    PRIEST AI
+                </a>
 
-                <div class="opportunity-list">
+                <a
+                    href="#contact"
+                    class="nav-link"
+                >
+                    Contact
+                </a>
 
-                    <span>
-                        <i class="fa-solid fa-code"></i>
-                        Web Developers
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-laptop-code"></i>
-                        Front-End Developers
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-server"></i>
-                        Back-End Developers
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-terminal"></i>
-                        System Administrators
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-network-wired"></i>
-                        Network Technicians
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-palette"></i>
-                        Graphic Designers
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-pen-nib"></i>
-                        UI/UX Designers
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-headset"></i>
-                        IT Support Specialists
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-shield-halved"></i>
-                        Cybersecurity Enthusiasts
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-bullhorn"></i>
-                        Digital Marketers
-                    </span>
-
-                </div>
-
-            </div>
+            </nav>
 
         </div>
 
-    </div>
+    </header>
 
-</section>
 
+    <main>
 
-<!-- =========================================================
-     TEAM APPLICATION FORM
-========================================================= -->
 
-<section
-    id="team-application"
-    class="section form-section">
+        <!-- =================================================
+             HERO
+        ================================================== -->
 
-    <div class="container">
+        <section
+            class="hero"
+            id="home"
+        >
 
-        <div class="section-heading">
+            <div class="container hero-container">
 
-            <span class="section-label">
-                WORK WITH US
-            </span>
+                <div class="hero-content">
 
-            <h2>
-                TEAM <span>APPLICATION</span>
-            </h2>
-
-            <p>
-                Tell us about yourself and your skills.
-            </p>
-
-        </div>
-
-
-        <form
-            id="team-form"
-            class="professional-form"
-            novalidate
-            enctype="multipart/form-data">
-
-
-            <div class="form-grid">
-
-
-                <div class="form-group">
-
-                    <label for="team-full-name">
-                        Full Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="team-full-name"
-                        name="fullName"
-                        placeholder="Enter your full name"
-                        required>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="team-email">
-                        Email
-                    </label>
-
-                    <input
-                        type="email"
-                        id="team-email"
-                        name="email"
-                        placeholder="you@example.com"
-                        required>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="team-phone">
-                        Phone Number
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="team-phone"
-                        name="phone"
-                        placeholder="+231 ..."
-                        required>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="team-location">
-                        Location
-                    </label>
-
-                    <input
-                        type="text"
-                        id="team-location"
-                        name="location"
-                        placeholder="City / Country"
-                        required>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="team-expertise">
-                        Area of Expertise
-                    </label>
-
-                    <select
-                        id="team-expertise"
-                        name="expertise"
-                        required>
-
-                        <option value="">
-                            Select your expertise
-                        </option>
-
-                        <option>
-                            Web Development
-                        </option>
-
-                        <option>
-                            Front-End Development
-                        </option>
-
-                        <option>
-                            Back-End Development
-                        </option>
-
-                        <option>
-                            System Administration
-                        </option>
-
-                        <option>
-                            Network Technology
-                        </option>
-
-                        <option>
-                            Graphic Design
-                        </option>
-
-                        <option>
-                            UI/UX Design
-                        </option>
-
-                        <option>
-                            IT Support
-                        </option>
-
-                        <option>
-                            Cybersecurity
-                        </option>
-
-                        <option>
-                            Digital Marketing
-                        </option>
-
-                        <option>
-                            Other
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="team-experience">
-                        Years of Experience
-                    </label>
-
-                    <select
-                        id="team-experience"
-                        name="experience"
-                        required>
-
-                        <option value="">
-                            Select experience
-                        </option>
-
-                        <option>
-                            Beginner / Student
-                        </option>
-
-                        <option>
-                            Less than 1 year
-                        </option>
-
-                        <option>
-                            1–2 years
-                        </option>
-
-                        <option>
-                            3–5 years
-                        </option>
-
-                        <option>
-                            5+ years
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-group form-full">
-
-                    <label for="team-portfolio">
-                        Portfolio / GitHub / Website
-                    </label>
-
-                    <input
-                        type="url"
-                        id="team-portfolio"
-                        name="portfolio"
-                        placeholder="https://yourwebsite.com">
-
-                </div>
-
-
-                <div class="form-group form-full">
-
-                    <label for="team-about">
-                        Tell Us About Yourself
-                    </label>
-
-                    <textarea
-                        id="team-about"
-                        name="about"
-                        rows="5"
-                        placeholder="Tell us about your skills, interests and experience..."
-                        required></textarea>
-
-                </div>
-
-
-                <div class="form-group form-full">
-
-                    <label for="team-why">
-                        Why Do You Want To Join Priest Tech?
-                    </label>
-
-                    <textarea
-                        id="team-why"
-                        name="reason"
-                        rows="5"
-                        placeholder="Tell us why you would like to work with Priest Tech..."
-                        required></textarea>
-
-                </div>
-
-
-                <div class="form-group form-full">
-
-                    <label for="team-cv">
-                        Upload CV
-                    </label>
-
-                    <input
-                        type="file"
-                        id="team-cv"
-                        name="cv"
-                        accept=".pdf,.doc,.docx">
-
-                    <small class="file-note">
-                        Accepted formats: PDF, DOC, DOCX
-                    </small>
-
-                </div>
-
-            </div>
-
-
-            <div class="form-actions">
-
-                <button
-                    type="submit"
-                    class="btn btn-primary">
-
-                    <i class="fa-solid fa-paper-plane"></i>
-
-                    SUBMIT APPLICATION
-
-                </button>
-
-            </div>
-
-
-            <div
-                id="team-form-message"
-                class="form-message"
-                role="status"
-                aria-live="polite">
-            </div>
-
-        </form>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     PROJECT INQUIRY / CONTACT
-========================================================= -->
-
-<section
-    id="contact"
-    class="section contact-section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span class="section-label">
-                LET'S BUILD
-            </span>
-
-            <h2>
-                HAVE A PROJECT <span>IN MIND?</span>
-            </h2>
-
-            <p>
-                Bring us the contract. Let's build it together.
-            </p>
-
-        </div>
-
-
-        <div class="contact-layout">
-
-
-            <!-- Contact Information -->
-
-            <aside class="contact-info">
-
-                <div class="contact-info-header">
-
-                    <span class="section-label">
-                        CONTACT PRIEST TECH
+                    <span class="eyebrow">
+                        <i class="fas fa-microchip"></i>
+                        THE FUTURE OF TECHNOLOGY
                     </span>
 
-                    <h3>
-                        Let's turn your idea into technology.
-                    </h3>
+                    <h1>
+                        We Build
+                        <span>Digital Solutions</span>
+                        That Work.
+                    </h1>
 
                     <p>
+                        PRIEST TECH provides professional technology,
+                        system administration, web development,
+                        IT support and digital solutions for businesses,
+                        organizations and individuals.
+                    </p>
 
-                        Tell us what you're trying to build.
-                        Our team will review your request and
-                        get back to you.
 
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#contact"
+                            class="btn btn-primary"
+                        >
+                            <i class="fas fa-rocket"></i>
+                            Start a Project
+                        </a>
+
+                        <a
+                            href="#services"
+                            class="btn btn-secondary"
+                        >
+                            Explore Services
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-stats">
+
+                        <div class="stat">
+                            <strong>24/7</strong>
+                            <span>Tech Support</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>100%</strong>
+                            <span>Commitment</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>231</strong>
+                            <span>Liberia</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="hero-card">
+
+                        <div class="hero-card-glow"></div>
+
+                        <img
+                            src="01A8656D-4E6D-4437-B00A-8ED81365A6DE.png"
+                            alt="PRIEST TECH Logo"
+                        >
+
+                        <div class="hero-card-text">
+                            <span>PRIEST TECH</span>
+                            <small>
+                                Innovating Digital Experiences
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
+
+        <section
+            class="section"
+            id="about"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        WHO WE ARE
+                    </span>
+
+                    <h2>
+                        Technology With
+                        <span>Purpose.</span>
+                    </h2>
+
+                    <p>
+                        We combine technical knowledge,
+                        creativity and problem-solving to
+                        deliver useful digital solutions.
                     </p>
 
                 </div>
 
 
-                <div class="contact-cards">
+                <div class="about-grid">
+
+                    <div class="about-content">
+
+                        <h3>
+                            Welcome to PRIEST TECH
+                        </h3>
+
+                        <p>
+                            PRIEST TECH is a technology-focused
+                            team dedicated to helping individuals,
+                            businesses and organizations use
+                            technology more effectively.
+                        </p>
+
+                        <p>
+                            From websites and system administration
+                            to technical support and digital
+                            solutions, our goal is simple:
+                            build technology that solves real problems.
+                        </p>
 
 
-                    <a
-                        href="#"
-                        class="contact-card whatsapp-link"
-                        data-contact="whatsapp">
+                        <div class="about-points">
 
-                        <div class="contact-card-icon">
+                            <div>
+                                <i class="fas fa-check-circle"></i>
+                                Professional technology services
+                            </div>
 
-                            <i class="fa-brands fa-whatsapp"></i>
+                            <div>
+                                <i class="fas fa-check-circle"></i>
+                                Reliable technical support
+                            </div>
 
-                        </div>
+                            <div>
+                                <i class="fas fa-check-circle"></i>
+                                Modern digital solutions
+                            </div>
 
-                        <div>
-
-                            <span>
-                                WHATSAPP
-                            </span>
-
-                            <strong>
-                                +231 777632081
-                            </strong>
-
-                        </div>
-
-                    </a>
-
-
-                    <a
-                        href="tel:+231887328802
-                        class="contact-card">
-
-                        <div class="contact-card-icon">
-
-                            <i class="fa-solid fa-phone"></i>
-
-                        </div>
-
-                        <div>
-
-                            <span>
-                                PHONE
-                            </span>
-
-                            <strong>
-                                +231 7776320810
-                            </strong>
+                            <div>
+                                <i class="fas fa-check-circle"></i>
+                                Client-focused development
+                            </div>
 
                         </div>
 
-                    </a>
+                    </div>
 
 
-                    <a
-                        href="mailto:info@priesttech.com"
-                        class="contact-card">
+                    <div class="about-card">
 
-                        <div class="contact-card-icon">
+                        <i class="fas fa-server"></i>
 
-                            <i class="fa-solid fa-envelope"></i>
+                        <h3>
+                            Built For The Digital Age
+                        </h3>
 
-                        </div>
+                        <p>
+                            We believe technology should make
+                            work easier, businesses stronger
+                            and opportunities more accessible.
+                        </p>
 
-                        <div>
-
-                            <span>
-                                EMAIL
-                            </span>
-
-                            <strong>
-                                info@priesttech.com
-                            </strong>
-
-                        </div>
-
-                    </a>
+                    </div>
 
                 </div>
 
+            </div>
 
-                <!-- Social Media -->
+        </section>
 
-                <div class="social-area">
 
-                    <span>
-                        FOLLOW PRIEST TECH
+        <!-- =================================================
+             SERVICES
+        ================================================== -->
+
+        <section
+            class="section services-section"
+            id="services"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        WHAT WE DO
                     </span>
 
-                    <div class="social-links">
+                    <h2>
+                        Our
+                        <span>Services</span>
+                    </h2>
 
-                        <a
-                            href="#"
-                            aria-label="Priest Tech Facebook">
-
-                            <i class="fa-brands fa-facebook-f"></i>
-
-                        </a>
-
-                        <a
-                            href="#"
-                            aria-label="Priest Tech Instagram">
-
-                            <i class="fa-brands fa-instagram"></i>
-
-                        </a>
-
-                        <a
-                            href="#"
-                            aria-label="Priest Tech TikTok">
-
-                            <i class="fa-brands fa-tiktok"></i>
-
-                        </a>
-
-                        <a
-                            href="#"
-                            aria-label="Priest Tech WhatsApp">
-
-                            <i class="fa-brands fa-whatsapp"></i>
-
-                        </a>
-
-                    </div>
+                    <p>
+                        Practical technology services designed
+                        around your needs.
+                    </p>
 
                 </div>
 
-            </aside>
+
+                <div class="services-grid">
 
 
-            <!-- Project Form -->
+                    <article class="service-card">
 
-            <form
-                id="project-form"
-                class="professional-form project-form"
-                novalidate>
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+
+                        <h3>
+                            Web Development
+                        </h3>
+
+                        <p>
+                            Modern responsive websites and
+                            web applications for businesses,
+                            organizations and personal brands.
+                        </p>
+
+                        <span class="service-number">
+                            01
+                        </span>
+
+                    </article>
 
 
-                <div class="form-grid">
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+
+                        <h3>
+                            System Administration
+                        </h3>
+
+                        <p>
+                            Server management, system setup,
+                            maintenance, troubleshooting and
+                            technical administration.
+                        </p>
+
+                        <span class="service-number">
+                            02
+                        </span>
+
+                    </article>
 
 
-                    <div class="form-group">
+                    <article class="service-card">
 
-                        <label for="project-name">
-                            Full Name
-                        </label>
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
 
-                        <input
-                            type="text"
-                            id="project-name"
-                            name="fullName"
-                            placeholder="Your full name"
-                            required>
+                        <h3>
+                            IT Support
+                        </h3>
+
+                        <p>
+                            Technical assistance for computers,
+                            software, networks and everyday
+                            technology problems.
+                        </p>
+
+                        <span class="service-number">
+                            03
+                        </span>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+
+                        <h3>
+                            Networking
+                        </h3>
+
+                        <p>
+                            Network setup, troubleshooting,
+                            connectivity solutions and
+                            infrastructure support.
+                        </p>
+
+                        <span class="service-number">
+                            04
+                        </span>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+
+                        <h3>
+                            Security & Maintenance
+                        </h3>
+
+                        <p>
+                            Technology maintenance and practical
+                            security-focused solutions to help
+                            protect your digital environment.
+                        </p>
+
+                        <span class="service-number">
+                            05
+                        </span>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+
+                        <h3>
+                            Digital Consulting
+                        </h3>
+
+                        <p>
+                            Technology guidance for people and
+                            organizations planning their next
+                            digital project.
+                        </p>
+
+                        <span class="service-number">
+                            06
+                        </span>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PROCESS
+        ================================================== -->
+
+        <section
+            class="section"
+            id="process"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        HOW WE WORK
+                    </span>
+
+                    <h2>
+                        Simple.
+                        <span>Professional.</span>
+                        Effective.
+                    </h2>
+
+                </div>
+
+
+                <div class="process-grid">
+
+
+                    <div class="process-card">
+
+                        <span>01</span>
+
+                        <i class="fas fa-comments"></i>
+
+                        <h3>
+                            Discuss
+                        </h3>
+
+                        <p>
+                            We understand your idea,
+                            challenge or technology needs.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-card">
+
+                        <span>02</span>
+
+                        <i class="fas fa-magnifying-glass"></i>
+
+                        <h3>
+                            Plan
+                        </h3>
+
+                        <p>
+                            We determine the best technical
+                            approach for your project.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-card">
+
+                        <span>03</span>
+
+                        <i class="fas fa-laptop-code"></i>
+
+                        <h3>
+                            Build
+                        </h3>
+
+                        <p>
+                            We develop and configure the
+                            solution according to the plan.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-card">
+
+                        <span>04</span>
+
+                        <i class="fas fa-circle-check"></i>
+
+                        <h3>
+                            Deliver
+                        </h3>
+
+                        <p>
+                            We test the solution and prepare
+                            it for use.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PROJECTS
+        ================================================== -->
+
+        <section
+            class="section projects-section"
+            id="projects"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        OUR WORK
+                    </span>
+
+                    <h2>
+                        Technology
+                        <span>Projects</span>
+                    </h2>
+
+                    <p>
+                        A growing portfolio of digital solutions
+                        built with purpose.
+                    </p>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <i class="fas fa-globe"></i>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <span>
+                                WEB DEVELOPMENT
+                            </span>
+
+                            <h3>
+                                Business Websites
+                            </h3>
+
+                            <p>
+                                Professional websites designed
+                                to help businesses establish
+                                their digital presence.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <i class="fas fa-school"></i>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <span>
+                                SOFTWARE
+                            </span>
+
+                            <h3>
+                                Management Systems
+                            </h3>
+
+                            <p>
+                                Digital management platforms
+                                designed to organize information
+                                and simplify administration.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <i class="fas fa-robot"></i>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <span>
+                                ARTIFICIAL INTELLIGENCE
+                            </span>
+
+                            <h3>
+                                PRIEST AI
+                            </h3>
+
+                            <p>
+                                An AI assistant experience
+                                developed as part of the
+                                PRIEST TECH ecosystem.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TEAM
+        ================================================== -->
+
+        <section
+            class="section"
+            id="team"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        THE TEAM
+                    </span>
+
+                    <h2>
+                        People Behind
+                        <span>PRIEST TECH</span>
+                    </h2>
+
+                    <p>
+                        A team built around technology,
+                        creativity and problem-solving.
+                    </p>
+
+                </div>
+
+
+                <div class="team-grid">
+
+
+                    <article class="team-card">
+
+                        <div class="team-avatar">
+
+                            <img
+                                src="01A8656D-4E6D-4437-B00A-8ED81365A6DE.png"
+                                alt="PRIEST TECH"
+                            >
+
+                        </div>
+
+                        <h3>
+                            PRIEST
+                        </h3>
+
+                        <p>
+                            Founder / Technology
+                        </p>
+
+                        <div class="team-socials">
+
+                            <a
+                                href="#contact"
+                                aria-label="Contact"
+                            >
+                                <i class="fas fa-envelope"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="team-card join-team-card">
+
+                        <div class="team-avatar">
+
+                            <i class="fas fa-user-plus"></i>
+
+                        </div>
+
+                        <h3>
+                            Your Name
+                        </h3>
+
+                        <p>
+                            Join the PRIEST TECH Team
+                        </p>
+
+                        <a
+                            href="#join"
+                            class="btn btn-secondary"
+                        >
+                            Join Us
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             JOIN TEAM
+        ================================================== -->
+
+        <section
+            class="section join-section"
+            id="join"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        JOIN US
+                    </span>
+
+                    <h2>
+                        Build The Future
+                        <span>With Us.</span>
+                    </h2>
+
+                    <p>
+                        Are you interested in technology,
+                        programming, system administration,
+                        design or digital solutions?
+                        Send us your information.
+                    </p>
+
+                </div>
+
+
+                <form
+                    class="tech-form"
+                    id="teamForm"
+                >
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="teamName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="teamName"
+                                name="name"
+                                placeholder="Your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="teamEmail">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="teamEmail"
+                                name="email"
+                                placeholder="you@example.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="teamPhone">
+                                Phone / WhatsApp
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="teamPhone"
+                                name="phone"
+                                placeholder="+231..."
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="teamSkill">
+                                Area of Interest
+                            </label>
+
+                            <select
+                                id="teamSkill"
+                                name="skill"
+                                required
+                            >
+
+                                <option value="">
+                                    Select an area
+                                </option>
+
+                                <option value="Web Development">
+                                    Web Development
+                                </option>
+
+                                <option value="System Administration">
+                                    System Administration
+                                </option>
+
+                                <option value="Networking">
+                                    Networking
+                                </option>
+
+                                <option value="Cybersecurity">
+                                    Cybersecurity
+                                </option>
+
+                                <option value="Graphic Design">
+                                    Graphic Design
+                                </option>
+
+                                <option value="IT Support">
+                                    IT Support
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
 
                     </div>
 
 
                     <div class="form-group">
 
-                        <label for="project-business">
-                            Business / Organization
-                        </label>
-
-                        <input
-                            type="text"
-                            id="project-business"
-                            name="business"
-                            placeholder="Business or organization">
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="project-phone">
-                            Phone Number
-                        </label>
-
-                        <input
-                            type="tel"
-                            id="project-phone"
-                            name="phone"
-                            placeholder="+231 ..."
-                            required>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="project-email">
-                            Email
-                        </label>
-
-                        <input
-                            type="email"
-                            id="project-email"
-                            name="email"
-                            placeholder="you@example.com"
-                            required>
-
-                    </div>
-
-
-                    <div class="form-group form-full">
-
-                        <label for="project-type">
-                            Project Type
-                        </label>
-
-                        <select
-                            id="project-type"
-                            name="projectType"
-                            required>
-
-                            <option value="">
-                                Select project type
-                            </option>
-
-                            <option>
-                                Website Development
-                            </option>
-
-                            <option>
-                                Web Design
-                            </option>
-
-                            <option>
-                                System Administration
-                            </option>
-
-                            <option>
-                                IT & Technical Support
-                            </option>
-
-                            <option>
-                                System Development
-                            </option>
-
-                            <option>
-                                Network & Security
-                            </option>
-
-                            <option>
-                                E-Commerce
-                            </option>
-
-                            <option>
-                                Custom Digital Platform
-                            </option>
-
-                            <option>
-                                Other
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="form-group form-full">
-
-                        <label for="project-description">
-                            Project Description
+                        <label for="teamMessage">
+                            Tell Us About Yourself
                         </label>
 
                         <textarea
-                            id="project-description"
-                            name="description"
+                            id="teamMessage"
+                            name="message"
                             rows="6"
-                            placeholder="Tell us about your project, goals and requirements..."
-                            required></textarea>
+                            placeholder="Tell us about your skills and experience..."
+                            required
+                        ></textarea>
 
                     </div>
 
-
-                    <div class="form-group">
-
-                        <label for="project-budget">
-                            Estimated Budget
-                        </label>
-
-                        <select
-                            id="project-budget"
-                            name="budget">
-
-                            <option value="">
-                                Select budget range
-                            </option>
-
-                            <option>
-                                Under $100
-                            </option>
-
-                            <option>
-                                $100 – $300
-                            </option>
-
-                            <option>
-                                $300 – $500
-                            </option>
-
-                            <option>
-                                $500 – $1,000
-                            </option>
-
-                            <option>
-                                $1,000+
-                            </option>
-
-                            <option>
-                                Let's discuss
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="contact-method">
-                            Preferred Contact Method
-                        </label>
-
-                        <select
-                            id="contact-method"
-                            name="contactMethod"
-                            required>
-
-                            <option value="">
-                                Choose contact method
-                            </option>
-
-                            <option>
-                                WhatsApp
-                            </option>
-
-                            <option>
-                                Phone Call
-                            </option>
-
-                            <option>
-                                Email
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-
-                <div class="form-actions">
 
                     <button
                         type="submit"
-                        class="btn btn-primary">
-
-                        <i class="fa-solid fa-paper-plane"></i>
-
-                        SEND PROJECT REQUEST
-
+                        class="btn btn-primary"
+                    >
+                        <i class="fas fa-paper-plane"></i>
+                        Submit Application
                     </button>
 
-                </div>
-
-
-                <div
-                    id="project-form-message"
-                    class="form-message"
-                    role="status"
-                    aria-live="polite">
-                </div>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     PREMIUM CTA
-========================================================= -->
-
-<section class="final-cta">
-
-    <div class="cta-grid" aria-hidden="true"></div>
-
-    <div class="container">
-
-        <div class="cta-content">
-
-            <span class="section-label">
-                READY TO BUILD?
-            </span>
-
-            <h2>
-                YOUR VISION.
-                <span>OUR CODE.</span>
-            </h2>
-
-            <p>
-                Have an idea that needs technology?
-                Let's build something powerful together.
-            </p>
-
-
-            <div class="cta-actions">
-
-                <a
-                    href="#contact"
-                    class="btn btn-primary">
-
-                    <i class="fa-solid fa-rocket"></i>
-
-                    START A PROJECT
-
-                </a>
-
-                <a
-                    href="#team-application"
-                    class="btn btn-secondary">
-
-                    <i class="fa-solid fa-users"></i>
-
-                    JOIN OUR TEAM
-
-                </a>
+                </form>
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
-</main>
+        <!-- =================================================
+             PRIEST AI
+        ================================================== -->
+
+        <section
+            class="ai-section"
+            id="ai"
+        >
+
+            <div class="ai-container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        ARTIFICIAL INTELLIGENCE
+                    </span>
+
+                    <h2>
+                        Meet
+                        <span>PRIEST AI</span>
+                    </h2>
+
+                    <p>
+                        Your technology assistant powered through
+                        the secure PRIEST TECH backend.
+                    </p>
+
+                </div>
 
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
+                <div class="ai-box">
 
-<footer class="site-footer">
+                    <div class="ai-header">
 
-    <div class="container">
+                        <img
+                            src="01A8656D-4E6D-4437-B00A-8ED81365A6DE.png"
+                            alt="PRIEST AI"
+                            class="ai-logo"
+                        >
 
-        <div class="footer-main">
+                        <div>
+
+                            <h3>
+                                PRIEST AI
+                            </h3>
+
+                            <p>
+                                Technology • Programming • IT • General Questions
+                            </p>
+
+                        </div>
+
+                    </div>
 
 
-            <!-- Brand -->
+                    <div
+                        class="ai-chat"
+                        id="aiChat"
+                    >
+
+                        <div class="ai-message">
+
+                            👋 Hello! I'm
+                            <strong>PRIEST AI</strong>.
+
+                            Ask me a question about technology,
+                            programming, websites, system
+                            administration or anything else.
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ai-input-area">
+
+                        <textarea
+                            id="aiInput"
+                            placeholder="Ask PRIEST AI anything..."
+                            autocomplete="off"
+                            rows="2"
+                        ></textarea>
+
+
+                        <button
+                            type="button"
+                            id="sendAI"
+                        >
+                            ⚡ Ask PRIEST AI
+                        </button>
+
+                    </div>
+
+
+                    <p
+                        id="aiStatus"
+                        class="ai-status"
+                    ></p>
+
+
+                    <p class="api-warning">
+
+                        🔒 Your AI request is securely processed
+                        through the PRIEST TECH backend.
+                        Private API credentials are never exposed
+                        in this website.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTACT
+        ================================================== -->
+
+        <section
+            class="section contact-section"
+            id="contact"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        GET IN TOUCH
+                    </span>
+
+                    <h2>
+                        Let's Build Something
+                        <span>Great.</span>
+                    </h2>
+
+                    <p>
+                        Have a project, business idea or
+                        technology problem? Let's talk.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-grid">
+
+
+                    <a
+                        href="tel:+231887328802"
+                        class="contact-card"
+                    >
+
+                        <i class="fas fa-phone"></i>
+
+                        <div>
+
+                            <span>
+                                Call Us
+                            </span>
+
+                            <strong>
+                                +231 887 328 802
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="https://wa.me/231887328802"
+                        class="contact-card"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="fab fa-whatsapp"></i>
+
+                        <div>
+
+                            <span>
+                                WhatsApp
+                            </span>
+
+                            <strong>
+                                Chat With PRIEST TECH
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="mailto:priesttech@gmail.com"
+                        class="contact-card"
+                    >
+
+                        <i class="fas fa-envelope"></i>
+
+                        <div>
+
+                            <span>
+                                Email
+                            </span>
+
+                            <strong>
+                                priesttech@gmail.com
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="contact-card">
+
+                        <i class="fas fa-location-dot"></i>
+
+                        <div>
+
+                            <span>
+                                Location
+                            </span>
+
+                            <strong>
+                                Liberia
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- PROJECT FORM -->
+
+                <div class="project-form-wrapper">
+
+                    <div class="form-heading">
+
+                        <span class="eyebrow">
+                            START A PROJECT
+                        </span>
+
+                        <h3>
+                            Tell Us What You Need
+                        </h3>
+
+                    </div>
+
+
+                    <form
+                        class="tech-form"
+                        id="projectForm"
+                    >
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="projectName">
+                                    Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="projectName"
+                                    name="name"
+                                    placeholder="Your name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="projectEmail">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="projectEmail"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="projectPhone">
+                                    Phone / WhatsApp
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="projectPhone"
+                                    name="phone"
+                                    placeholder="+231..."
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="projectType">
+                                    Project Type
+                                </label>
+
+                                <select
+                                    id="projectType"
+                                    name="project"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select project type
+                                    </option>
+
+                                    <option value="Website">
+                                        Website
+                                    </option>
+
+                                    <option value="Web Application">
+                                        Web Application
+                                    </option>
+
+                                    <option value="System Administration">
+                                        System Administration
+                                    </option>
+
+                                    <option value="Networking">
+                                        Networking
+                                    </option>
+
+                                    <option value="IT Support">
+                                        IT Support
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="projectMessage">
+                                Project Details
+                            </label>
+
+                            <textarea
+                                id="projectMessage"
+                                name="message"
+                                rows="7"
+                                placeholder="Describe your project or technology problem..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+
+                            <i class="fas fa-paper-plane"></i>
+
+                            Send Project Inquiry
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-content">
+
+                    <span class="eyebrow">
+                        READY TO BUILD?
+                    </span>
+
+                    <h2>
+                        Your Idea.
+                        Our Technology.
+                        <span>One Solution.</span>
+                    </h2>
+
+                    <p>
+                        Contact PRIEST TECH today and let's
+                        turn your technology idea into reality.
+                    </p>
+
+                    <a
+                        href="#contact"
+                        class="btn btn-primary"
+                    >
+                        <i class="fas fa-arrow-right"></i>
+                        Start Your Project
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
 
             <div class="footer-brand">
 
-                <a href="#home" class="footer-logo">
+                <img
+                    src="01A8656D-4E6D-4437-B00A-8ED81365A6DE.png"
+                    alt="PRIEST TECH"
+                >
 
-                    <img
-                        src="assets/priest-tech-logo.png"
-                        alt="Priest Tech Logo">
+                <div>
 
-                </a>
+                    <h3>
+                        PRIEST TECH
+                    </h3>
 
-                <h3>
-                    PRIEST TECH
-                </h3>
+                    <p>
+                        Technology. Innovation. Solutions.
+                    </p>
 
-                <p>
-                    Your Vision. Our Code.
-                </p>
-
-                <span>
-                    CODE • DESIGN • BUILD
-                </span>
+                </div>
 
             </div>
 
 
-            <!-- Footer Navigation -->
-
-            <div class="footer-column">
+            <div class="footer-links">
 
                 <h4>
-                    COMPANY
+                    Quick Links
                 </h4>
 
                 <a href="#home">
@@ -2439,164 +1796,760 @@
                     Projects
                 </a>
 
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>
-                    CONNECT
-                </h4>
-
-                <a href="#team">
-                    Our Team
-                </a>
-
-                <a href="#join">
-                    Join Our Team
+                <a href="#ai">
+                    PRIEST AI
                 </a>
 
                 <a href="#contact">
                     Contact
                 </a>
 
-                <a href="#">
-                    Privacy Policy
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Services
+                </h4>
+
+                <a href="#services">
+                    Web Development
                 </a>
 
-                <a href="#">
-                    Terms of Service
+                <a href="#services">
+                    System Administration
+                </a>
+
+                <a href="#services">
+                    IT Support
+                </a>
+
+                <a href="#services">
+                    Networking
                 </a>
 
             </div>
 
 
-            <!-- Newsletter / Contact -->
-
-            <div class="footer-column footer-contact">
+            <div class="footer-contact">
 
                 <h4>
-                    LET'S BUILD
+                    Contact
                 </h4>
 
                 <p>
-                    Have a project in mind?
-                    Start a conversation with Priest Tech.
+                    <i class="fas fa-phone"></i>
+                    +231 887 328 802
+                </p>
+
+                <p>
+                    <i class="fas fa-location-dot"></i>
+                    Liberia
                 </p>
 
                 <a
-                    href="#contact"
-                    class="footer-project-link">
+                    href="https://wa.me/231887328802"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer-whatsapp"
+                >
 
-                    START A PROJECT
-
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
 
                 </a>
 
             </div>
+
 
         </div>
 
 
         <div class="footer-bottom">
 
-            <p>
-                © <span id="current-year">2026</span>
-                Priest Tech. All Rights Reserved.
-            </p>
+            <div class="container">
 
+                <p>
+                    © <span id="currentYear"></span>
+                    PRIEST TECH. All rights reserved.
+                </p>
 
-            <p>
-                BUILT WITH <span>CODE & PASSION</span>
-            </p>
+                <p>
+                    Built with technology by PRIEST TECH.
+                </p>
+
+            </div>
 
         </div>
 
-    </div>
-
-</footer>
+    </footer>
 
 
-<!-- =========================================================
-     WHATSAPP FLOATING BUTTON
-========================================================= -->
+    <!-- =====================================================
+         FLOATING WHATSAPP
+    ===================================================== -->
 
-<a
-    href="#"
-    class="whatsapp-floating whatsapp-link"
-    data-contact="whatsapp"
-    aria-label="Contact Priest Tech on WhatsApp">
+    <a
+        href="https://wa.me/231887328802"
+        class="floating-whatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with PRIEST TECH on WhatsApp"
+    >
 
-    <i class="fa-brands fa-whatsapp"></i>
+        <i class="fab fa-whatsapp"></i>
 
-    <span>
-        Chat With Us
-    </span>
-
-</a>
+    </a>
 
 
-<!-- =========================================================
-     SCROLL TO TOP
-========================================================= -->
-
-<button
-    type="button"
-    id="scroll-top"
-    class="scroll-top"
-    aria-label="Scroll to top">
-
-    <i class="fa-solid fa-arrow-up"></i>
-
-</button>
-
-
-<!-- =========================================================
-     NOTIFICATION / TOAST
-========================================================= -->
-
-<div
-    id="toast"
-    class="toast"
-    role="alert"
-    aria-live="assertive">
-
-    <div class="toast-icon">
-
-        <i class="fa-solid fa-check"></i>
-
-    </div>
-
-    <div class="toast-content">
-
-        <strong>
-            Success
-        </strong>
-
-        <p>
-            Your request has been received.
-        </p>
-
-    </div>
+    <!-- =====================================================
+         SCROLL TO TOP
+    ===================================================== -->
 
     <button
         type="button"
-        id="toast-close"
-        aria-label="Close notification">
+        class="scroll-top"
+        id="scrollTop"
+        aria-label="Scroll to top"
+    >
 
-        <i class="fa-solid fa-xmark"></i>
+        <i class="fas fa-arrow-up"></i>
 
     </button>
 
-</div>
+
+    <!-- =====================================================
+         TOAST
+    ===================================================== -->
+
+    <div
+        id="toast"
+        class="toast"
+    >
+    </div>
 
 
-<!-- =========================================================
-     MAIN JAVASCRIPT
-========================================================= -->
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
 
-<script src="script.js"></script>
+    <script>
+
+        /* =================================================
+           PAGE LOADER
+        ================================================= */
+
+        window.addEventListener("load", function () {
+
+            const loader =
+                document.getElementById("pageLoader");
+
+            if (loader) {
+
+                setTimeout(function () {
+
+                    loader.classList.add("loader-hidden");
+
+                }, 500);
+
+            }
+
+        });
+
+
+        /* =================================================
+           CURRENT YEAR
+        ================================================= */
+
+        const yearElement =
+            document.getElementById("currentYear");
+
+        if (yearElement) {
+
+            yearElement.textContent =
+                new Date().getFullYear();
+
+        }
+
+
+        /* =================================================
+           MOBILE MENU
+        ================================================= */
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const mainNav =
+            document.getElementById("mainNav");
+
+        if (menuToggle && mainNav) {
+
+            menuToggle.addEventListener(
+                "click",
+                function () {
+
+                    mainNav.classList.toggle("active");
+
+                }
+            );
+
+
+            document
+                .querySelectorAll(".nav-link")
+                .forEach(function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        function () {
+
+                            mainNav.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+                });
+
+        }
+
+
+        /* =================================================
+           SCROLL TO TOP
+        ================================================= */
+
+        const scrollTop =
+            document.getElementById("scrollTop");
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (!scrollTop) return;
+
+                if (window.scrollY > 500) {
+
+                    scrollTop.classList.add("show");
+
+                } else {
+
+                    scrollTop.classList.remove("show");
+
+                }
+
+            }
+        );
+
+
+        if (scrollTop) {
+
+            scrollTop.addEventListener(
+                "click",
+                function () {
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+                }
+            );
+
+        }
+
+
+        /* =================================================
+           TOAST
+        ================================================= */
+
+        function showToast(message) {
+
+            const toast =
+                document.getElementById("toast");
+
+            if (!toast) return;
+
+            toast.textContent = message;
+
+            toast.classList.add("show");
+
+            setTimeout(function () {
+
+                toast.classList.remove("show");
+
+            }, 3500);
+
+        }
+
+
+        /* =================================================
+           TEAM APPLICATION FORM
+        ================================================= */
+
+        const teamForm =
+            document.getElementById("teamForm");
+
+        if (teamForm) {
+
+            teamForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+                    const name =
+                        document.getElementById(
+                            "teamName"
+                        )?.value.trim();
+
+                    if (!name) return;
+
+                    showToast(
+                        "Thank you! Your team application has been received."
+                    );
+
+                    teamForm.reset();
+
+                }
+            );
+
+        }
+
+
+        /* =================================================
+           PROJECT FORM
+        ================================================= */
+
+        const projectForm =
+            document.getElementById("projectForm");
+
+        if (projectForm) {
+
+            projectForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+                    const name =
+                        document.getElementById(
+                            "projectName"
+                        )?.value.trim();
+
+                    if (!name) return;
+
+                    showToast(
+                        "Thank you! Your project inquiry has been received."
+                    );
+
+                    projectForm.reset();
+
+                }
+            );
+
+        }
+
+
+        /* =================================================
+           PRIEST AI FRONTEND
+           Backend: /api/chat
+        ================================================= */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const input =
+                    document.getElementById("aiInput");
+
+                const button =
+                    document.getElementById("sendAI");
+
+                const chat =
+                    document.getElementById("aiChat");
+
+                const status =
+                    document.getElementById("aiStatus");
+
+
+                if (!input || !button || !chat) {
+
+                    console.error(
+                        "PRIEST AI: Required elements were not found."
+                    );
+
+                    return;
+
+                }
+
+
+                function addMessage(
+                    text,
+                    type = "ai"
+                ) {
+
+                    const message =
+                        document.createElement("div");
+
+                    message.classList.add(
+                        "ai-message"
+                    );
+
+
+                    if (type === "user") {
+
+                        message.classList.add(
+                            "user-message"
+                        );
+
+                    }
+
+
+                    message.textContent = text;
+
+                    chat.appendChild(message);
+
+                    chat.scrollTop =
+                        chat.scrollHeight;
+
+                    return message;
+
+                }
+
+
+                function showStatus(
+                    message,
+                    isError = false
+                ) {
+
+                    if (!status) return;
+
+                    status.style.display =
+                        "block";
+
+                    status.textContent =
+                        message;
+
+                    status.style.color =
+                        isError
+                            ? "#ff6b6b"
+                            : "#ffd000";
+
+                }
+
+
+                function hideStatus() {
+
+                    if (!status) return;
+
+                    status.style.display =
+                        "none";
+
+                    status.textContent = "";
+
+                }
+
+
+                function createTypingIndicator() {
+
+                    const typing =
+                        document.createElement("div");
+
+                    typing.className =
+                        "ai-message";
+
+                    typing.id =
+                        "aiTyping";
+
+                    typing.textContent =
+                        "PRIEST AI is thinking...";
+
+                    chat.appendChild(typing);
+
+                    chat.scrollTop =
+                        chat.scrollHeight;
+
+                    return typing;
+
+                }
+
+
+                function removeTypingIndicator() {
+
+                    const typing =
+                        document.getElementById(
+                            "aiTyping"
+                        );
+
+                    if (typing) {
+
+                        typing.remove();
+
+                    }
+
+                }
+
+
+                async function sendMessage() {
+
+                    const message =
+                        input.value.trim();
+
+
+                    if (!message) {
+
+                        showStatus(
+                            "Please type a message first."
+                        );
+
+                        input.focus();
+
+                        return;
+
+                    }
+
+
+                    if (message.length > 4000) {
+
+                        showStatus(
+                            "Your message is too long. Please keep it under 4,000 characters.",
+                            true
+                        );
+
+                        return;
+
+                    }
+
+
+                    hideStatus();
+
+                    addMessage(
+                        message,
+                        "user"
+                    );
+
+                    input.value = "";
+
+
+                    button.disabled = true;
+
+                    button.textContent =
+                        "⏳ PRIEST AI is thinking...";
+
+
+                    createTypingIndicator();
+
+
+                    try {
+
+                        const response =
+                            await fetch(
+                                "/api/chat",
+                                {
+                                    method: "POST",
+
+                                    headers: {
+                                        "Content-Type":
+                                            "application/json"
+                                    },
+
+                                    body:
+                                        JSON.stringify({
+                                            message:
+                                                message
+                                        })
+
+                                }
+                            );
+
+
+                        let data;
+
+
+                        try {
+
+                            data =
+                                await response.json();
+
+                        } catch (jsonError) {
+
+                            throw new Error(
+                                "The server returned an invalid response."
+                            );
+
+                        }
+
+
+                        removeTypingIndicator();
+
+
+                        if (!response.ok) {
+
+                            const backendError =
+                                data?.error ||
+                                "The AI service returned an error.";
+
+                            throw new Error(
+                                backendError
+                            );
+
+                        }
+
+
+                        const reply =
+                            typeof data?.reply === "string"
+                                ? data.reply.trim()
+                                : "";
+
+
+                        if (!reply) {
+
+                            throw new Error(
+                                "PRIEST AI returned an empty response."
+                            );
+
+                        }
+
+
+                        addMessage(
+                            reply,
+                            "ai"
+                        );
+
+
+                    } catch (error) {
+
+                        console.error(
+                            "PRIEST AI request failed:",
+                            error
+                        );
+
+
+                        removeTypingIndicator();
+
+
+                        let errorMessage =
+                            "Sorry, PRIEST AI is temporarily unavailable. Please try again.";
+
+
+                        if (
+                            error.message &&
+                            error.message.includes(
+                                "Failed to fetch"
+                            )
+                        ) {
+
+                            errorMessage =
+                                "I couldn't connect to the PRIEST TECH server. Please check your internet connection and try again.";
+
+                        }
+
+
+                        else if (
+                            error.message &&
+                            error.message.includes(
+                                "GROQ_API_KEY"
+                            )
+                        ) {
+
+                            errorMessage =
+                                "The AI backend is not configured yet. Please add the GROQ_API_KEY in Vercel.";
+
+                        }
+
+
+                        else if (
+                            error.message &&
+                            error.message.includes(
+                                "429"
+                            )
+                        ) {
+
+                            errorMessage =
+                                "PRIEST AI is receiving too many requests right now. Please wait a moment and try again.";
+
+                        }
+
+
+                        addMessage(
+                            errorMessage,
+                            "ai"
+                        );
+
+
+                        showStatus(
+                            "AI request failed.",
+                            true
+                        );
+
+
+                    } finally {
+
+                        button.disabled =
+                            false;
+
+                        button.textContent =
+                            "⚡ Ask PRIEST AI";
+
+                        input.focus();
+
+                    }
+
+                }
+
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        sendMessage();
+
+                    }
+                );
+
+
+                input.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (
+                            event.key === "Enter" &&
+                            !event.shiftKey
+                        ) {
+
+                            event.preventDefault();
+
+                            sendMessage();
+
+                        }
+
+                    }
+                );
+
+
+                input.addEventListener(
+                    "input",
+                    function () {
+
+                        hideStatus();
+
+                    }
+                );
+
+
+                console.log(
+                    "PRIEST AI frontend loaded successfully."
+                );
+
+            }
+        );
+
+    </script>
+
+
+    <!-- Existing project JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>
