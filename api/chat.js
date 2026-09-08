@@ -1,43 +1,34 @@
 const Groq = require("groq-sdk");
 
+const groq = new Groq({
+    apiKey: process.env.GROQ_API_KEY
+});
+
 module.exports = async (req, res) => {
     if (req.method !== "POST") {
         return res.status(405).json({
             success: false,
-            error: "Method not allowed"
+            error: "Method not allowed. Use POST."
         });
     }
 
     try {
-        const apiKey = process.env.GROQ_API_KEY;
-
-        if (!apiKey) {
-            return res.status(500).json({
-                success: false,
-                error: "GROQ_API_KEY is missing"
-            });
-        }
-
         const { message } = req.body || {};
 
         if (!message || typeof message !== "string") {
             return res.status(400).json({
                 success: false,
-                error: "Please enter a message"
+                error: "Message is required."
             });
         }
 
-        const groq = new Groq({
-            apiKey
-        });
-
-        const response = await groq.chat.completions.create({
+        const completion = await groq.chat.completions.create({
             model: "llama-3.3-70b-versatile",
             messages: [
                 {
                     role: "system",
                     content:
-                        "You are PRIEST AI, the intelligent AI assistant for PRIEST TECH. Be helpful, friendly, clear and professional."
+                        "You are PRIEST AI, the AI assistant of PRIEST TECH. Be helpful, professional, friendly, and knowledgeable about technology, programming, system administration, networking, websites, IT support, and general questions."
                 },
                 {
                     role: "user",
@@ -49,12 +40,18 @@ module.exports = async (req, res) => {
         });
 
         const reply =
-            response.choices?.[0]?.message?.content ||
-            "Sorry, I couldn't generate a response.";
+            completion.choices?.[0]?.message?.content;
+
+        if (!reply) {
+            return res.status(500).json({
+                success: false,
+                error: "PRIEST AI returned an empty response."
+            });
+        }
 
         return res.status(200).json({
             success: true,
-            reply
+            reply: reply
         });
 
     } catch (error) {
@@ -62,7 +59,9 @@ module.exports = async (req, res) => {
 
         return res.status(500).json({
             success: false,
-            error: "AI service temporarily unavailable."
+            error:
+                error?.message ||
+                "PRIEST AI service temporarily unavailable."
         });
     }
 };
